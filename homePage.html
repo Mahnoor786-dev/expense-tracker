@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>expense tracker</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Gugi&family=Roboto:wght@400&display=swap");
+        *{
+            font-family: 'Gugi', cursive;
+            font-family: 'Roboto', sans-serif;
+        }
+      h1 {
+        text-align: center;
+      }
+      h1 a {
+        color: rgb(3, 151, 3);
+      }
+      .details {
+        width: 80%;
+        box-sizing: border-box;
+        margin-left: auto;
+        margin-right: auto;
+        border-spacing: 1px;
+        border: 1px solid rgb(160, 159, 159);
+      }
+      .details td,
+      th {
+        padding: 5px;
+      }
+
+      .details tr:nth-child(even) {
+        background-color: rgb(230, 230, 230);
+      }
+      .details tr:first-child {
+        background-color: black;
+        color: white;
+      }
+
+      #navigate{
+        width: 73%;
+        box-sizing: border-box;
+        margin-left: auto;
+    }
+      #navigate button{
+        padding: 7px 0 7px 0;
+        margin-top: 8px;
+        border: 1px solid gray;
+        border-radius: 3px;
+        box-shadow: 1px 2px #999;
+        width: 30%;
+        background-color: white;
+      }
+      #navigate > :first-child > button{
+            background-color: black;
+            color: white;
+      }
+      .update{
+        background-color: rgb(3, 151, 3);
+        color: white;
+        width: 48%;
+        padding: 7px 4px 7px 4px;
+        font-size: 14px;
+        border-radius: 7px;
+      }
+      .delete{
+        background-color: rgb(236, 2, 2);
+        color: white;
+        width: 48%;
+        padding: 7px 4px 7px 4px;
+        font-size: 14px;
+        border-radius: 7px;
+      }
+    </style>
+  </head>
+  <body id="home">
+    <div>
+      <h1><a href="homePage.html"> My Expense Tracker App </a></h1>
+      <table id="expTable" class="details">
+        <tr id="header">
+          <th>Sr.</th>
+          <th>Expense Summary</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Type</th>
+          <th>Date</th>
+          <th>Options</th>
+        </tr>
+      </table>
+
+      <div id="navigate">
+        <a href="AddNewExpense.html">
+          <button>Add New Expense</button>
+        </a>
+        <a href="FilterExpenses.html">
+            <button>Filter Result</button>
+        </a>
+      </div>
+    </div>
+  </body>
+  <script src="home.js"></script>
+</html>

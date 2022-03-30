@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph summary</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Gugi&family=Roboto:wght@400&display=swap");
+
+        * {
+            font-family: 'Gugi', cursive;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        div {
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+        }
+
+        select {
+            width: 38%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        input {
+            width: 16%;
+            padding: 10px;
+            margin-left: 16px;
+            box-sizing: border-box;
+            background-color: #e5e5e5;
+            border: 2px solid #b5b2b2;
+            border-radius: 10px;
+        }
+
+        input:hover {
+            background-color: #f3f3f3;
+            border: 2px solid gray;
+        }
+
+        body div:first-child, :nth-child(2) {
+            margin-bottom: 20px;
+        }
+
+        canvas {
+            width: 60%;
+            max-width: 700px;
+            height: 380px;
+            display: none; /* make room for other elements before time period is selected*/
+        }
+
+        #btn {
+            width: 35%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #btn button {
+            background-color: transparent;
+            border: 1px solid rgb(3, 182, 3);
+            color: rgb(3, 182, 3);
+            padding: 10px 20px 10px 20px;
+            width: 90%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Graph Based Summary</h1>
+        <h2>Select Time period</h2>
+        <select id="month">
+            <option value="select" selected disabled> Select Month </option>
+            <option value="1">January</option>
+            <option value="2">February</option>
+            <option value="3">March</option>
+            <option value="4">April</option>
+            <option value="5">May</option>
+            <option value="6">June</option>
+            <option value="7">July</option>
+            <option value="8">August</option>
+            <option value="9">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+        </select>
+        <select id="year">
+            <option value="select" selected disabled> Select Year </option>
+        </select>
+        <input type="button" id="selectM-Y" value="Show Summary">
+    </div>
+    <div>
+        <canvas id="summaryChart"></canvas>
+    </div>
+
+    <div id="btn">
+        <a href="homePage.html">
+            <button>Go Back to Home</button>
+        </a>
+    </div>
+</body>
+<script src="graph.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+</html>
